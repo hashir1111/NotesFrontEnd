@@ -1,0 +1,53 @@
+.note {
+    position: relative;
+    background-color: #feff9c;
+    width: 10em;
+    height: 10em;
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: all ease 0.3s;
+    transform: rotate(-6deg);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.note:nth-child(even) {
+    background-color: #7afcff;
+    transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+}
+
+.note:nth-child(3n) {
+    background-color: #ff7eb9;
+    transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+}
+
+.note:hover,.note.note--focused {
+    transform: scale(1.5);
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.note__text {
+    flex: 1;
+    outline: none;
+    margin-top: 10px;
+
+}
+
+.note__link {
+    display: none;
+}
+
+.note .btn-close{
+    position: absolute;
+    top: 4px;
+    right: 4px; 
+}
